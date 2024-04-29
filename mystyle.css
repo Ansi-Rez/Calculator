@@ -1,0 +1,18 @@
+*
+{
+    margin:0;
+    padding:0;
+}
+
+.html-calculator
+{
+    width:250px;
+    height:250px;
+    background-color:#0F52BA;
+}
+
+#input
+{
+    display:block;
+    margin:auto;
+}
