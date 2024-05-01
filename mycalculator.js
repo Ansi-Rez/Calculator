@@ -35,3 +35,34 @@ const calculator =
     }
 };
 
+const buttons = document.querySelectorAll("button");
+
+for(let i=0; i < buttons.length; i++)
+{
+    buttons[i].addEventListener("click",()=>
+    {
+        let text = document.querySelector("#input");
+
+        if(buttons[i].innerText == '=')
+        {
+            let breakpoint = /[+\-*/]/;
+            let textinput = text.value.toString();
+            let operation = textinput.split(breakpoint);
+            let sign;
+            for(let j=0; j < textinput.length; j++)
+            {
+                if(textinput[j] == '+' || textinput[j] == '-' || textinput[j] == '*' || textinput[j] == '/')
+                {
+                    sign = textinput[j];
+                }
+            }
+
+            text.value = calculator.operate(operation[0],sign,operation[1]);
+        }
+        else{
+        let input = buttons[i].innerText;
+        
+        text.value = text.value + input;
+        }
+    });
+}
