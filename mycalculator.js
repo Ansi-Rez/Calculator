@@ -59,6 +59,10 @@ for(let i=0; i < buttons.length; i++)
 
             text.value = calculator.operate(operation[0],sign,operation[1]);
         }
+        else if(buttons[i].innerText == 'clr')
+        {
+            text.value = "";
+        }
         else{
         let input = buttons[i].innerText;
         
